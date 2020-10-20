@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scal=1.0">
+    <meta http-equiv="X-UA-Comapatible" content="ie=edge">
+    <title>Bé tập tính</title>
+    <!-- Import Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Link style cua minh -->
+    <link href="./style.css" rel="stylesheet">
+    <!-- Link javascript -->
+    <script src="./index.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Bé tập tính</h1>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-4">
+                        <p>Số thứ nhất</p>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" id="so1" onblur="kiemTraSoHang(id)">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <p>Số thứ hai</p>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" id="so2" onblur="kiemTraSoHang(id)">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="radio">
+                        <input type="radio" name="pheptinh" value="cong"> Cộng
+                    </div>
+
+                    <div class="radio">
+                        <input type="radio" name="pheptinh" value="tru"> Trừ
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="radio">
+                        <input type="radio" name="pheptinh" value="nhan"> Nhân
+                    </div>
+
+                    <div class="radio">
+                        <input type="radio" name="pheptinh" value="chia"> Chia
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <p>Kết quả</p>
+            </div>
+            <div class="col-md-4">
+                <input type="text" id="ketqua">
+            </div>
+            <div class="col-md-3">
+                <button onclick="tinhToan('pheptinh','so1','so2')">Tính</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                <p>Thông báo</p>
+            </div>
+
+            <div class="col-md-7">
+                <p id="thongbao"></p>
+            </div>
+        </div>
+
+    </div>
+</body>
